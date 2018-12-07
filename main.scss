@@ -1,0 +1,94 @@
+$color1:black;
+$background:rgb(227, 240, 45);
+$border: 2em solid rgb(83, 223, 83);
+
+body{
+    background-color: lightblue;
+}
+
+
+%tractorStyle{
+    color: $color1;
+    background-color: $background;
+    border: $border;
+}
+
+%sectiondim{
+    height: 600px;
+    width: 100%;
+
+}
+
+
+h1 {
+    
+    @extend %tractorStyle;
+    text-align: center;
+    font-size: 4em;
+    padding: 0em;
+    margin: 0;
+    
+    
+}
+
+h2{
+    @extend %tractorStyle;
+    border-radius: 200%;
+}
+
+li{
+    list-style: none;
+    color: red;
+    font-size: 24px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $border;
+    @extend %sectiondim;
+    opacity: 0;
+    background-color: lightblue;
+    
+    img{
+       @extend %sectiondim;
+
+    
+    .highlights{
+        @extend %sectiondim;
+        text-align: center;
+      
+        
+    
+    .form{
+        @extend %sectiondim;
+        text-align: center;
+        font-size: 18px;
+        border: $border;
+    }
+}
+    }
+}
+    
+section.fadein {
+    animation: reveal;
+    animation-duration: .9s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    
+    
+    100% {
+        opacity: 1;
+    }
+
+}
+    
+
